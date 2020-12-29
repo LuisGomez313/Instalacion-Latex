@@ -1,0 +1,742 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Latex_guia_Instalacion</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+#subfigure
+{
+            width: 100%;
+}
+
+
+#fig1
+{
+            float: left;
+            width: 50%;
+}
+
+#fig2
+{           
+		float: right;
+           width: 50%;
+}
+
+span.red {
+  background: red;
+   border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin-right: 15px;
+  text-align: center;
+  width: 1.6em;
+-webkit-box-shadow: 5px 5px 3px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    5px 5px 3px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         5px 5px 3px 0px rgba(50, 50, 50, 0.75);
+}
+
+tecla{
+padding: 0.1em 0.6em;
+border: 1px solid #CCC;
+font-family: Arial,Helvetica,sans-serif;
+background-color: #F7F7F7;
+color: #333;
+box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 2px #FFF inset;
+border-radius: 3px;
+display: inline-block;
+margin: 0px 0.1em;
+text-shadow: 0px 1px 0px #FFF;
+line-height: 1.4;
+white-space: nowrap;
+font-size: 12px;
+cursor: pointer;
+}
+tecla:hover{
+background-color: transparent;
+cursor: pointer;
+}
+
+#header {
+      padding-bottom: 32px;
+    }
+
+#header h1 {
+      text-align: center;
+      white-space: pre-wrap;
+      width: 90%;
+      margin: 81px auto 48px auto;
+    }
+
+.fecha {
+      font-style: italic;
+      text-align: center;
+      color: #7a7a7a;
+    }
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><header id="header">
+<h1>INSTALACIÓN Y CONFIGURACIÓN DE LATEX BAJO WINDOWS</h1>
+<section class="fecha">
+<time>Diciembre 28, 2020</time>
+por
+<span>Grupo GIE</span>
+</section>
+</header><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4"><a class="md-toc-inner" href="#1-eliminando-archivos-temporales">1. Eliminando archivos temporales</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n19"><a class="md-toc-inner" href="#2-software-libre-open-source-necesario">2. Software Libre (open source) necesario:</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n29"><a class="md-toc-inner" href="#3-links-para-descarga-e-instalación-a-name3linksa">3. Links para descarga e instalación </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n63"><a class="md-toc-inner" href="#4-proceso-de-instalación">4. Proceso de instalación</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n65"><a class="md-toc-inner" href="#41-instalar-miktex">4.1. Instalar MiKTeX</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n78"><a class="md-toc-inner" href="#42-actualizar-miktex">4.2. Actualizar Miktex</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n87"><a class="md-toc-inner" href="#43-instalar-texstudio">4.3. Instalar TeXstudio</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n90"><a class="md-toc-inner" href="#431-configurar-visor-externo">4.3.1. Configurar Visor Externo</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n99"><a class="md-toc-inner" href="#432-configurar-idioma-español">4.3.2. Configurar idioma español</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n104"><a class="md-toc-inner" href="#44-un-primer-archivo-latex">4.4. Un primer archivo LATEX</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n116"><a class="md-toc-inner" href="#45-instalar-mathpix">4.5. Instalar Mathpix</a></span></p></div><h2><a name="1-eliminando-archivos-temporales" class="md-header-anchor"></a><span>1. Eliminando archivos temporales</span></h2><p><span>Un archivo temporal es aquel que puede ser creado por el software con el fin de contener información de forma transitoria durante el tiempo que nos encontramos creando un archivo estándar, y luego de que cerramos el programa que estábamos utilizando, de manera automática el archivo temporal debería borrarse.</span></p><p><span>Estos archivos temporales son utilizados con el propósito de recuperar datos que puedan llegar a perderse en el caso de que el programa o la PC se llegaran a detener de manera anormal y sorpresiva. A pesar de ser transitorios, en ocasiones el sistema no los elimina, por lo que deberíamos recurrir a hacerlo manualmente. Este tipo de archivos pueden generar un perjuicio para el rendimiento de la PC.</span></p><p><span>Así, es conveniente eliminar manualmente (o configurar algún software que lo haga automáticamente) archivos que se encuentran localizados en dos carpetas.</span></p><ul><li><span>Acción: </span><tecla><span> Windows</span></tecla><span> + </span><tecla><span>R</span></tecla><span> despliega la ventana ejecutar, escribir: </span><strong><span>%temp%</span></strong><span>, pulsar Enter y se despliega la carpeta </span><strong><span>Temp</span></strong><span>, y se procede a eliminar los archivos y (carpetas) que contiene. Al final de este proceso mostrará un mensaje</span></li></ul><p><img src="imagenes\0_temporales.png" referrerpolicy="no-referrer" alt="0_temporales"></p><ul><li><span>Acción: </span><tecla><span> Windows</span></tecla><span> + </span><tecla><span>R</span></tecla><span> despliega la ventana ejecutar, escribir : </span><strong><span>temp</span></strong><span>, pulsar </span><tecla><span>Enter</span></tecla><span> y se despliega la carpeta </span><strong><span>Temp</span></strong><span> ubicada en la carpeta </span><strong><span>Windows</span></strong><span>. Se repite el proceso anterior.</span></li><li><span>Hay una carpeta: </span><strong><span>prefetch</span></strong><span> con temporales ubicada en </span><strong><span>(C:</span></strong><span>\</span><strong><span>WINDOWS</span></strong><span>\</span><strong><span>Prefetch)</span></strong><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span>. El programa Windows, al encender el equipo, analizará durante 10 segundos a cuales archivos el programa accede y los anota en un archivo en la carpeta prefetch. El resultado: un inicio más rápido de los programas. Por eso se recomienda </span><u><span>no suprimir</span></u><span> el contenido de esta carpeta puesto que sólo reducirá los rendimientos de Windows.</span></li></ul><h2><a name="2-software-libre-open-source-necesario" class="md-header-anchor"></a><span>2. Software Libre (open source) necesario:</span></h2><p><strong><span>Sumatra</span></strong><span> Visor de documentos pdf, ePub, MOBI, CHM, XPS, DjVu entre otros. Se ha elegido como visor externo para el programa TeXstudio.</span></p><p><strong><span>MiKTeX</span></strong><span> Aplicación informática, incluye más de 800 paquetes con tipografías, macros, etc para usarlos en los editores de texto compatibles.</span></p><p><strong><span>TeXstudio</span></strong><span> Editor de LATEX, para la escritura de textos científicos.</span></p><p><strong><span>Open office</span></strong><span> Facilita la configuración del idioma español en TeXstudio.</span></p><p><strong><span>Mathpix</span></strong><span> Herramienta adicional, para capturar ecuaciones y gráficas.</span></p><p><strong><span>Jabref</span></strong><span> gestor de referencias bibliográficas de código abierto que permite importar, editar, organizar y exportar referencias en formato BibTeX, por lo que es especialmente útil para usuarios de LaTeX.</span></p><p><span>A continuación la respectiva dirección para descarga del software y la instalación en cada programa. Es importante seguir las indicaciones que se irán dando en cada numeral.</span></p><blockquote><p><strong><span>Nota 1:</span></strong>
+<span>Antes de iniciar la descarga el usuario debe identificar si el sistema operativo es a 32 o 64 bits. Para ello, un recorrido es: </span><em><span>Panel de control → Sistema y seguridad → Sistema</span></em><span>.</span></p></blockquote><h2><a name="3-links-para-descarga-e-instalación-a-name3linksa" class="md-header-anchor"></a><span>3. Links para descarga e instalación </span><a name="3.links"></a></h2><ol start='' ><li><span>Sumatra pdf</span></li></ol><blockquote><p><a href='https://www.sumatrapdfreader.org/' target='_blank' class='url'>https://www.sumatrapdfreader.org/</a></p></blockquote><ol start='2' ><li><span>MiKTeX</span></li></ol><blockquote><p><a href='https://miktex.org/download' target='_blank' class='url'>https://miktex.org/download</a></p></blockquote><ol start='3' ><li><span>TeXstudio</span></li></ol><blockquote><p><a href='https://texstudio.org/' target='_blank' class='url'>https://texstudio.org/</a></p></blockquote><ol start='4' ><li><span>Open office (Instalación completa y paquete de idioma)</span></li></ol><blockquote><p><a href='https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.8/binaries/es/Apache_OpenOffice_4.1.8_Win_x86_install_es.exe/download' target='_blank' class='url'>https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.8/binaries/es/Apache_OpenOffice_4.1.8_Win_x86_install_es.exe/download</a></p></blockquote><p><span>y el paquete de idioma</span></p><blockquote><p><a href='https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.8/binaries/es/Apache_OpenOffice_4.1.8_Win_x86_langpack_es.exe/download' target='_blank' class='url'>https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.8/binaries/es/Apache_OpenOffice_4.1.8_Win_x86_langpack_es.exe/download</a></p></blockquote><ol start='5' ><li><span>Mathpix</span></li></ol><blockquote><p><a href='https://mathpix.com/' target='_blank' class='url'>https://mathpix.com/</a></p></blockquote><ol start='6' ><li><span>Jabref</span></li></ol><blockquote><p><a href='https://www.fosshub.com/JabRef.html' target='_blank' class='url'>https://www.fosshub.com/JabRef.html</a></p></blockquote><h2><a name="4-proceso-de-instalación" class="md-header-anchor"></a><span>4. Proceso de instalación</span></h2><p><span>En esta sección no se incluye el paso a paso para instalación de Sumatra y JabRef pues ese proceso es muy intuitivo.</span></p><h3><a name="41-instalar-miktex" class="md-header-anchor"></a><span>4.1. Instalar MiKTeX</span></h3><p><span>MiKTeX (pronunciado mick-tech) es una implementación actualizada de TeX/LaTeX y programas relacionados </span><sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup><span>.</span></p><p><span>TeX es un sistema de composición tipográfica escrito por Donald Ervin Knuth, quien dice que está destinado a la creación de libros hermosos, y especialmente a los libros que contienen muchas matemáticas.</span></p><p><span>Con el fin de permitir que MiKTeX actualice de forma automática los paquetes o archivos se recomienda para su buen funcionamiento seguir estas indicaciones.</span></p><p><span>Al iniciar la instalación cuando aparezca la imagen de la izquierda se debe habilitar la opción </span><strong><span>Aceptar las condiciones de MiKTeK</span></strong><span>, y en la imagen de la derecha se sugiere el acceso para todos los usuarios.</span></p><div id="subfigure">
+	<div id="fig1">
+	<img src="imagenes/1_inicio_miktek.png" style="zoom:100%">
+	</div>
+	<div id="fig2">
+	<img src="imagenes/2_cualquiera_miktex.png" style="zoom:100%">
+	</div>
+</div><p>&nbsp;</p><p><span>Posteriormente continuar el proceso aceptando hasta la aparición de la ventana:</span></p><p><img src="imagenes\imagen_1.png" referrerpolicy="no-referrer" alt="imagen_1"></p><p><span>donde, debe elegir lo que se está indicando:</span></p><div id="subfigure">
+	<div id="fig1">
+	<img src="imagenes/imagen_2.png" style="zoom:100%">
+	</div>
+	<div id="fig2">
+	<img src="imagenes/imagen_3.png" style="zoom:100%">
+	</div>
+</div><p>&nbsp;</p><p><span>Esta última decisión permite además que el compilar en Rstudio se genere el archivo pdf.</span></p><h3><a name="42-actualizar-miktex" class="md-header-anchor"></a><span>4.2. Actualizar Miktex</span></h3><p><span>Es habitual que en algunas ocasiones al compilar el archivo que se está elaborando en TeXstudio, éste no encuentre un paquete para generar el pdf. Es precisamente cuando se debe acudir a la consola de MiKTeX para resolver esa necesidad.</span></p><p><span>Para su acceso ir a botón de inicio en windows, buscar </span><em><span>Miktex Console</span></em><span>, y en la ventana que aparece elegir la primera opción:</span></p><p><img src="imagenes\7_miktex_console.png" referrerpolicy="no-referrer"></p><p><span>Aparecerá una nueva ventana con la opción </span><em><span>check for updates</span></em><span>, que al activarla generará en la parte superior izquierda la leyenda </span><em><span>Updates(</span><span>#</span><span>)</span></em><span> informando cuántas actualizaciones hay pendientes. Se pulsa ese botón y luego el de </span><em><span>Update now</span></em><span>:</span></p><p><img src="imagenes\9_activar_updates.png" referrerpolicy="no-referrer"></p><p><span>Una vez finalice el proceso se cierra la Consola de Miktex.</span></p><blockquote><p><strong><span>Nota 2:</span></strong>
+<span>Si el programa Miktex no permite este proceso inmediatamente, se recomienda apagar el equipo para volver a activar la consola de Miktex.</span></p></blockquote><h3><a name="43-instalar-texstudio" class="md-header-anchor"></a><span>4.3. Instalar TeXstudio</span></h3><p><span>Una vez se ha realizado la descarga en la página señalada en el numeral </span><strong><span>3: Links para descarga e instalación</span></strong><span>, ejecutar el archivo .exe y el proceso se reduce a pulsar la opción </span><strong><span>Aceptar</span></strong><span> en cada ventana y tendrá un aspecto como:</span></p><p><img src="imagenes/consola_2.png" referrerpolicy="no-referrer"></p><h4><a name="431-configurar-visor-externo" class="md-header-anchor"></a><span>4.3.1. Configurar Visor Externo</span></h4><p><span>En este proceso se debe conocer la ruta o path donde está ubicada la carpeta del programa Sumatra previamente instalado. Por ejemplo:</span></p><p><img src="imagenes/6_path_sumatra.png" referrerpolicy="no-referrer"></p><p><span>Ahora cuando finaliza la instalación de TeXstudio y se ejecuta, por defecto toma del computador un lector de pdf (por ejemplo Adobe Reader) ya existente en el equipo. A continuación se presenta el proceso para configurar a Sumatra como visor externo, para ello ir al menú emergente, en </span><strong><span>opciones</span></strong><span>, seleccionar configurar TeXstudio:</span></p><p><img src="imagenes/5_conf_texstudio.png" referrerpolicy="no-referrer"></p><p><span>Enseguida continuar con los pasos indicados, para el tercero de ellos se busca la ruta donde quedó instalado Sumatra y se selecciona el archivo ejecutable:</span></p><p><img src="imagenes/1_Visor_externo.png" referrerpolicy="no-referrer"></p><blockquote><p><strong><span>Nota 3:</span></strong>
+<span>La ventana de  elegir Sumatra como visor externo es que una vez se compile y visualice el archivo, al acceder al visor externo, este puede mantenerse abierto y continuar el proceso de compilación, sin que haya conflicto alguno. Por supuesto esto se comprenderá en su momento.</span></p></blockquote><h4><a name="432-configurar-idioma-español" class="md-header-anchor"></a><span>4.3.2. Configurar idioma español</span></h4><p><span>Así como se mencionó tener presente la ruta para Sumatra también debe identificar las rutas para TeXstudio y para Open Office. Nuevamente ingresando a la ventana de configuración de TeXstudio ir al menú </span><strong><span>Comprobación de Lenguaje</span></strong><span> y establezca la ruta que se ilustra en los pasos </span><span class="red"><span>2</span></span><span> y </span><span class="red"><span>4</span></span><span> de la siguiente imagen. Para el paso </span><span class="red"><span>3</span></span><span> seleccionar el archivo </span><strong><span>es_ES</span></strong><span>. Luego de esta imagen se muestra en la siguiente la ruta para completar el paso </span><span class="red"><span>4</span></span><span>. Para que el programa tome los cambios hacer clic en </span><strong><span>Aceptar</span></strong><span>.</span></p><p><img src="imagenes/10_Idioma_1.png" referrerpolicy="no-referrer"></p><p><span>Para acción 4 anterior, seguir los siguientes pasos</span></p><p><img src="imagenes/11_Idioma_2.png" referrerpolicy="no-referrer"></p><h3><a name="44-un-primer-archivo-latex" class="md-header-anchor"></a><span>4.4. Un primer archivo LATEX</span></h3><p><span>El documento tiene dos cosas llamativas</span><sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup><span>: los comandos que &quot;van&quot; entre &quot;corchetes&quot; enseguida de </span><code><span>\</span><span>begin</span></code><span> y un </span><code><span>\</span><span>end</span></code><span> y el contenido entre ellos es el entorno.</span></p><p><span>Un entorno superimportante es el entorno document, ahí dentro irá el contenido de nuestro documento. Todo lo que va entre la definición de documento (</span><code><span>\</span><span>documentclass</span></code><span>) y el inicio del entorno document se conoce como preámbulo y es donde se cargan paquetes (</span><code><span>\</span><span>usepackage</span></code><span>), se definen comandos y se establecen opciones.</span></p><p><span>Con el programa TeXstudio, en la herramienta Asistentes, se encuentra la opción que permite crear una plantilla básica para un primer archivo:</span></p><p><img src="imagenes/Primer_archivo.png" referrerpolicy="no-referrer"></p><p><span>Enseguida se despliega un menú que contiene los elementos básicos de un preámbulo. Para el manejo de expresiones matemáticas e imágenes es indispensble aceptar los paquetes AMS y graphicx.</span></p><p><img src="imagenes/margenes.png" referrerpolicy="no-referrer"></p><p><span>Aparece entonces en la consola de TeXstudio las siguientes líneas, que permiten elaborar un primer archivo. El cuerpo del trabajo a elaborar estará contenido en el entorno o ambiente document:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="latex"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="latex"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; <span class="cm-tab" role="presentation" cm-text="	"> </span><span class="cm-tag">\documentclass</span><span class="cm-bracket">[</span><span class="cm-atom">11pt</span>,letterpaper<span class="cm-bracket">]{</span><span class="cm-atom">article</span><span class="cm-bracket">}</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">[</span><span class="cm-atom">latin1</span><span class="cm-bracket">]{</span>inputenc<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">[</span><span class="cm-atom">T1</span><span class="cm-bracket">]{</span>fontenc<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">amsmath</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">amsfonts</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">amssymb</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">graphicx</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">[</span><span class="cm-atom">left=3.00cm, right=3.00cm, top=2.50cm, bottom=2.50cm</span><span class="cm-bracket">]{</span>geometry<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\begin</span><span class="cm-bracket">{</span><span class="cm-atom">document</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>...</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>... ``cuerpo del trabajo"</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>...</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\end</span><span class="cm-bracket">{</span><span class="cm-atom">document</span><span class="cm-bracket">}</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 299px;"></div><div class="CodeMirror-gutters" style="display: none; height: 299px;"></div></div></div></pre><blockquote><p><strong><span>Nota 4:</span></strong>
+<span>Enseguida es importante grabar el archivo. En este proceso puede elegir</span>
+<span>la ubicación en su computador y crear </span><u><span>la carpeta que contendrá</span></u><span> además del archivo .tex, los demás que se generarán como resultado de la compilación.</span></p></blockquote><p><img src="imagenes/grabar.png" referrerpolicy="no-referrer"></p><h3><a name="45-instalar-mathpix" class="md-header-anchor"></a><span>4.5. Instalar Mathpix</span></h3><p><span>Mathpix es una poderosa herramienta gratuita que permite hacer capturas reconociendo funciones y ecuaciones matemáticas escritas a mano (y por supuesto de páginas de libros).</span></p><p><span>Después de ingresar al link suministrado en la sección </span><a href=' #3.links'><span>3</span></a><span>, seleccionar el botón </span><strong><span>Windows</span></strong><span> para descargar el ejecutable:</span></p><p><img src="imagenes/12_math_descarga.png" referrerpolicy="no-referrer"></p><p><span>Cuando inicie la instalación y encuentre las ventanas que se muestran, realizar lo señalado:</span></p><p><img src="imagenes/13_math_abrir.png" referrerpolicy="no-referrer"></p><p><span>El botón </span><strong><span>Finish</span></strong><span> anterior lo lleva al proceso de registro (</span><strong><span>Sign Up</span></strong><span>):</span></p><p><img src="imagenes/14_math_registro.png" referrerpolicy="no-referrer"></p><p><span>Para acceder al programa (</span><strong><span>Login</span></strong><span>), éste solicita nuevamente su correo y contraseña:</span></p><p><img src="imagenes/15_math_login.png" referrerpolicy="no-referrer"></p><p><span>Cada vez que use </span><strong><span>Mathpix</span></strong><span> en cualquier equipo encontrará el historial de las capturas que ha realizado.</span></p><blockquote><p><strong><span>Nota 5:</span></strong><span> </span>
+<span>Para realizar una captura, primero se activa el programa y, enseguida se emplea la combinación de teclas </span><tecla><span>Ctrl</span></tecla><span> + </span><tecla><span>Alt</span></tecla><span> + </span><tecla><span>M</span></tecla><span> luego de lo cual se hace el </span><strong><span>&quot;barrido&quot;</span></strong><span> del área a capturar.</span></p></blockquote><p><span>Al realizar la captura de una fórmula escrita a mano, se observa el resultado en las dos modalidades en la figura </span><a href='#fig:1'><span>1</span></a><span>. La imagen </span><a href='#fig:1a'><span>1(a)</span></a><span> muestra la ecuación resultante en la pestaña </span><strong><span>OCR</span></strong><span> (Optical Character Recognition) y la imagen </span><a href='#fig:1b'><span>1(b)</span></a><span> en la pestaña </span><strong><span>Original</span></strong><span> para guardar en formato png.</span></p><div id="subfigure">
+	<a name="fig:1"></a>
+	<div id="fig1">
+	<a name="fig:1a"></a>
+	<img src="imagenes/16_captura1.png" style="zoom:100%"> 
+    <div style=" text-align:center;font-style: italic;"><p> <b>(a)</b> Ecuación</p></div>
+	</div>
+	<div id="fig2">
+	<a name="fig:1b"></a>
+	<img src="imagenes/17_captura2.png" style="zoom:100%">
+<div style=" text-align:center;font-style: italic;"><p> <b>(b)</b> Imagen</p></div>
+	</div>
+	<div style=" text-align:center;font-style: italic;"><p> <b>Figura 1:</b> Captura de texto a través de <b>Mathpix</b></p></div>
+</div><p><span>Entonces, si en la imagen </span><a href='#fig:1b'><span>1(b)</span></a><span> hacemos click sobre el rótulo </span><span class="red"><span>2</span></span><span> (copy PNG) y ahora vamos a la consola del primer archivo, en la primera línea del cuerpo del trabajo (enseguida de </span><span>\</span><span>begin{ document}) y pegamos (</span><tecla><span>CTRL</span></tecla><span>+</span><tecla><span>V</span></tecla><span>),  vemos la acción del programa: abre la carpeta que contiene el archivo y sugiere un nombre para esta imagen:</span></p><figure><table><thead><tr><th style='text-align:center;' ><img src="imagenes/18_pegar_captura2.png" referrerpolicy="no-referrer" alt="Mathpix"></th></tr></thead><tbody><tr><td style='text-align:center;' ><strong><span>Figura 2:</span></strong><span> </span><em><span>Pegando imagen</span></em></td></tr></tbody></table></figure><p><span>Luego de Aceptar, el programa despliega un nuevo menú que corresponde a </span><strong><span>figure</span></strong><span> (imagen de la derecha), se siguen las observaciones y finaliza con Aceptar.</span></p><p><span>Vemos en la consola, en el cuerpo del trabajo, el resultado de &quot;pegar&quot; las imagen:</span></p><p><img src="imagenes/21_opcion_scale.png" referrerpolicy="no-referrer"></p><p><span>Para que la posición de la imagen al insertarla en el archivo se mantenga donde queremos, la letra H (here), que aparece en paréntesis rectangulares a la derecha de </span><code><span>\</span><span>begin{figure}</span></code><span>, es necesario incluír en el preámbulo el paquete </span><code><span>\</span><span>usepackage{float}</span></code><span>.</span></p><p><span>Así el archivo hasta el momento tiene las siguientes líneas:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="latex" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="latex"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\documentclass</span><span class="cm-bracket">[</span><span class="cm-atom">11pt</span>,letterpaper<span class="cm-bracket">]{</span><span class="cm-atom">article</span><span class="cm-bracket">}</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">[</span><span class="cm-atom">latin1</span><span class="cm-bracket">]{</span>inputenc<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">[</span><span class="cm-atom">T1</span><span class="cm-bracket">]{</span>fontenc<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">amsmath</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">amsfonts</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">amssymb</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">graphicx</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">float</span><span class="cm-bracket">}</span> <span class="cm-comment">%ubicación de las imágenes</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">[</span><span class="cm-atom">left=3.00cm, right=3.00cm, top=2.50cm, bottom=2.50cm</span><span class="cm-bracket">]{</span>geometry<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\begin</span><span class="cm-bracket">{</span><span class="cm-atom">document</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\begin</span><span class="cm-bracket">{</span><span class="cm-atom">figure</span><span class="cm-bracket">}[</span>H<span class="cm-bracket">]</span> <span class="cm-comment">%para mantener la imagen en este lugar</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\centering</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\includegraphics</span><span class="cm-bracket">{</span>screenshot001<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\caption</span><span class="cm-bracket">{}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\label</span><span class="cm-bracket">{</span>fig:screenshot001<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\end</span><span class="cm-bracket">{</span><span class="cm-atom">figure</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\end</span><span class="cm-bracket">{</span><span class="cm-atom">document</span><span class="cm-bracket">}</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 391px;"></div><div class="CodeMirror-gutters" style="display: none; height: 391px;"></div></div></div></pre><p><span>Volviendo a la imagen </span><a href='#fig:1a'><span>1(a)</span></a><span> y haciendo click sobre la línea rotulada con </span><span class="red"><span>2</span></span><span> , y pegando esta captura en la penúltima línea del cuerpo del documento, aparece:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded md-focus" lang="latex" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap CodeMirror-focused" lang="latex"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 368px; left: 42.7031px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">1</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\documentclass</span><span class="cm-bracket">[</span><span class="cm-atom">11pt</span>,letterpaper<span class="cm-bracket">]{</span><span class="cm-atom">article</span><span class="cm-bracket">}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">2</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">[</span><span class="cm-atom">latin1</span><span class="cm-bracket">]{</span>inputenc<span class="cm-bracket">}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">3</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">[</span><span class="cm-atom">T1</span><span class="cm-bracket">]{</span>fontenc<span class="cm-bracket">}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">4</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">amsmath</span><span class="cm-bracket">}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">5</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">amsfonts</span><span class="cm-bracket">}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">6</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">amssymb</span><span class="cm-bracket">}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">7</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">graphicx</span><span class="cm-bracket">}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">8</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">float</span><span class="cm-bracket">}</span> <span class="cm-comment">%ubicación de las imágenes</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">9</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">[</span><span class="cm-atom">left=3.00cm, right=3.00cm, top=2.50cm, bottom=2.50cm</span><span class="cm-bracket">]{</span>geometry<span class="cm-bracket">}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">10</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tag">\begin</span><span class="cm-bracket">{</span><span class="cm-atom">document</span><span class="cm-bracket">}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">11</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\begin</span><span class="cm-bracket">{</span><span class="cm-atom">figure</span><span class="cm-bracket">}[</span>H<span class="cm-bracket">]</span> <span class="cm-comment">%para mantener la imagen en este lugar</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">12</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\centering</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">13</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\includegraphics</span><span class="cm-bracket">{</span>screenshot001<span class="cm-bracket">}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">14</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\caption</span><span class="cm-bracket">{}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">15</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\label</span><span class="cm-bracket">{</span>fig:screenshot001<span class="cm-bracket">}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">16</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\end</span><span class="cm-bracket">{</span><span class="cm-atom">figure</span><span class="cm-bracket">}</span></span></pre></div><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">17</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\begin</span><span class="cm-bracket">{</span><span class="cm-atom">equation</span><span class="cm-bracket">}</span>S^<span class="cm-bracket">{</span><span class="cm-atom">2</span><span class="cm-bracket">}</span>=<span class="cm-tag">\frac</span><span class="cm-bracket">{</span><span class="cm-tag">\sum</span>_<span class="cm-bracket">{</span>i=1<span class="cm-bracket">}</span>^<span class="cm-bracket">{</span>n<span class="cm-bracket">}</span><span class="cm-tag">\left</span>(x_<span class="cm-bracket">{</span>i<span class="cm-bracket">}</span>-<span class="cm-tag">\bar</span><span class="cm-bracket">{</span>x<span class="cm-bracket">}</span><span class="cm-tag">\right</span>)^<span class="cm-bracket">{</span><span class="cm-atom">2</span><span class="cm-bracket">}}{</span>n-18<span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>1<span class="cm-bracket">}</span><span class="cm-tag">\end</span><span class="cm-bracket">{</span><span class="cm-atom">equation</span><span class="cm-bracket">}</span></span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">20</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tag">\end</span><span class="cm-bracket">{</span><span class="cm-atom">document</span><span class="cm-bracket">}</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 437px;"></div><div class="CodeMirror-gutters" style="display: none; height: 437px;"></div></div></div></pre><p><span>y para una mejor observación visual, la linea 17 se puede separar adecuadamente en tres &quot;líneas&quot; para leer:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="latex" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="latex"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">1</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\documentclass</span><span class="cm-bracket">[</span><span class="cm-atom">11pt</span>,letterpaper<span class="cm-bracket">]{</span><span class="cm-atom">article</span><span class="cm-bracket">}</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">2</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">[</span><span class="cm-atom">latin1</span><span class="cm-bracket">]{</span>inputenc<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">3</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">[</span><span class="cm-atom">T1</span><span class="cm-bracket">]{</span>fontenc<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">4</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">amsmath</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">5</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">amsfonts</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">6</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">amssymb</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">7</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">graphicx</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">8</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">{</span><span class="cm-atom">float</span><span class="cm-bracket">}</span> <span class="cm-comment">%ubicación de las imágenes</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">9</span><span class="cm-tab" role="presentation" cm-text="	">   </span><span class="cm-tag">\usepackage</span><span class="cm-bracket">[</span><span class="cm-atom">left=3.00cm, right=3.00cm, top=2.50cm, bottom=2.50cm</span><span class="cm-bracket">]{</span>geometry<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">10</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tag">\begin</span><span class="cm-bracket">{</span><span class="cm-atom">document</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">11</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\begin</span><span class="cm-bracket">{</span><span class="cm-atom">figure</span><span class="cm-bracket">}[</span>H<span class="cm-bracket">]</span> <span class="cm-comment">%para mantener la imagen en este lugar</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">12</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\centering</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">13</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\includegraphics</span><span class="cm-bracket">{</span>screenshot001<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">14</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\caption</span><span class="cm-bracket">{}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">15</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\label</span><span class="cm-bracket">{</span>fig:screenshot001<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">16</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\end</span><span class="cm-bracket">{</span><span class="cm-atom">figure</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">17</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\begin</span><span class="cm-bracket">{</span><span class="cm-atom">equation</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">18</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>S^<span class="cm-bracket">{</span><span class="cm-atom">2</span><span class="cm-bracket">}</span>=<span class="cm-tag">\frac</span><span class="cm-bracket">{</span><span class="cm-tag">\sum</span>_<span class="cm-bracket">{</span>i=1<span class="cm-bracket">}</span>^<span class="cm-bracket">{</span>n<span class="cm-bracket">}</span><span class="cm-tag">\left</span>(x_<span class="cm-bracket">{</span>i<span class="cm-bracket">}</span>-<span class="cm-tag">\bar</span><span class="cm-bracket">{</span>x<span class="cm-bracket">}</span><span class="cm-tag">\right</span>)^<span class="cm-bracket">{</span><span class="cm-atom">2</span><span class="cm-bracket">}}{</span>n-1<span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">19</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag">\end</span><span class="cm-bracket">{</span><span class="cm-atom">equation</span><span class="cm-bracket">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-atom">20</span><span class="cm-tab" role="presentation" cm-text="	">  </span><span class="cm-tag">\end</span><span class="cm-bracket">{</span><span class="cm-atom">document</span><span class="cm-bracket">}</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 460px;"></div><div class="CodeMirror-gutters" style="display: none; height: 460px;"></div></div></div></pre><p><span>Finalmente al compilar (</span><tecla><span>F6</span></tecla><span>) generando el archivo pdf y, una vez en la ventana Log muestre que &quot;El proceso terminó normalmente&quot;, se visualiza (</span><tecla><span>F7</span></tecla><span>) y se observa el resultado esperado:</span></p><figure><table><thead><tr><th style='text-align:center;' ><img src="imagenes/FINAL_FINAL.png" referrerpolicy="no-referrer" alt="Mathpix"></th></tr></thead><tbody><tr><td style='text-align:center;' ><strong><span>Figura 3:</span></strong><span> </span><em><span>Resultado final</span></em></td></tr></tbody></table></figure><p><span>Accediendo al icono señalado por la flecha (Abrir) se aprecia el contenido de los archivos que se generan en el proceso de compilación:</span></p><figure><table><thead><tr><th style='text-align:center;' ><img src="imagenes/FINAL_FINAL_NO_VA_MAS.png" referrerpolicy="no-referrer" alt="Mathpix"></th></tr></thead><tbody><tr><td style='text-align:center;' ><strong><span>Figura 4:</span></strong><span> </span><em><span>Contenido carpeta</span></em></td></tr></tbody></table></figure><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <a href='https://es.ccm.net/faq/10500-vaciar-la-carpeta-prefetch-para-acelerar-windows' target='_blank' class='url'>https://es.ccm.net/faq/10500-vaciar-la-carpeta-prefetch-para-acelerar-windows</a><span> </span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='volver al documento' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>2</span> <a href='https://miktex.org/about' target='_blank' class='url'>https://miktex.org/about</a> <a name='dfref-footnote-2' href='#ref-footnote-2' title='volver al documento' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>3</span> <a href='https://ondiz.github.io/cursoLatex/Contenido/03.DocumentoBasico.html' target='_blank' class='url'>https://ondiz.github.io/cursoLatex/Contenido/03.DocumentoBasico.html</a> <a name='dfref-footnote-3' href='#ref-footnote-3' title='volver al documento' class='reversefootnote' >↩</a></div></div></div>
+</body>
+</html>
